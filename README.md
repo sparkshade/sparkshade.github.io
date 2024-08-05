@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spar$hade - Abbigliamento di Marca</title>
-  <link href="https://fonts.googleapis.com/css2?family=Aurora+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aurora+Pro&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -75,6 +75,14 @@
         <section id="prodotti">
             <h2>I Nostri Prodotti</h2>
             <div id="product-list"></div>
+            
+            <div class="product">
+                <h3>Wisionary Close Hoodie</h3>
+                <img src="percorso_dell_immagine/wisionary_close_hoodie.jpg" alt="Wisionary Close Hoodie" style="max-width: 100%; height: auto;">
+                <p>Una comoda felpa con cappuccio nera con il logo Spar$hade.</p>
+                <p>Prezzo: €59.99</p>
+                <button onclick="addToCart('Wisionary Close Hoodie')">Aggiungi al Carrello</button>
+            </div>
         </section>
     </main>
     <footer>
@@ -82,11 +90,11 @@
     </footer>
 
     <script>
-        // Il resto del codice JavaScript rimane invariato
         const products = [
             { name: "T-Shirt Classica", price: 29.99 },
             { name: "Jeans Slim Fit", price: 59.99 },
-            { name: "Felpa con Cappuccio", price: 49.99 }
+            { name: "Felpa con Cappuccio", price: 49.99 },
+            { name: "Wisionary Close Hoodie", price: 59.99, image: "percorso_dell_immagine/wisionary_close_hoodie.jpg" }
         ];
 
         function displayProducts() {
@@ -96,6 +104,7 @@
                 productDiv.className = 'product';
                 productDiv.innerHTML = `
                     <h3>${product.name}</h3>
+                    ${product.image ? `<img src="${product.image}" alt="${product.name}" style="max-width: 100%; height: auto;">` : ''}
                     <p>Prezzo: €${product.price}</p>
                     <button onclick="addToCart('${product.name}')">Aggiungi al Carrello</button>
                 `;
@@ -107,11 +116,6 @@
             alert(`Prodotto aggiunto al carrello: ${productName}`);
         }
 
-        window.onload = displayProducts;
-    </script>
-</body>
-</html>
-        // Carica i prodotti quando la pagina è pronta
         window.onload = displayProducts;
     </script>
 </body>
