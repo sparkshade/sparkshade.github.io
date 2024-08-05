@@ -61,17 +61,12 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
             <li><a href="#prodotti">Prodotti</a></li>
             <li><a href="#chi-siamo">Chi Siamo</a></li>
             <li><a href="#contatti">Contatti</a></li>
         </ul>
     </nav>
     <main>
-        <section id="home">
-            <h2>Benvenuti su Spar$hade</h2>
-            <p>Scopri la nostra collezione di abbigliamento di alta qualità.</p>
-        </section>
         <section id="prodotti">
             <h2>I Nostri Prodotti</h2>
             <div id="product-list"></div>
