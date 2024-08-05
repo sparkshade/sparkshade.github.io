@@ -81,6 +81,20 @@
                 <img src="percorso_dell_immagine/wisionary_close_hoodie.jpg" alt="Wisionary Close Hoodie" style="max-width: 100%; height: auto;">
                 <p>Una comoda felpa con cappuccio nera con il logo Spar$hade.</p>
                 <p>Prezzo: €59.99</p>
+              function displayProducts() {
+    const productList = document.getElementById('product-list');
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.className = 'product';
+        productDiv.innerHTML = `
+            <h3>${product.name}</h3>
+            ${product.image ? `<img src="${product.image}" alt="${product.name}" style="max-width: 100%; height: auto;">` : ''}
+            <p>Prezzo: €${product.price}</p>
+            <button onclick="addToCart('${product.name}')">Aggiungi al Carrello</button>
+        `;
+        productList.appendChild(productDiv);
+    });
+}
                 <button onclick="addToCart('Wisionary Close Hoodie')">Aggiungi al Carrello</button>
             </div>
         </section>
