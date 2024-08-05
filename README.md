@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spar$hade - Abbigliamento di Marca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Aurora+Pro&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,6 +17,10 @@
             color: white;
             text-align: center;
             padding: 1em;
+        }
+        header h1 {
+            font-family: 'Aurora Pro', sans-serif;
+            font-size: 2.5em;
         }
         nav {
             background-color: #444;
@@ -77,14 +82,13 @@
     </footer>
 
     <script>
-        // Simulazione di un database di prodotti
+        // Il resto del codice JavaScript rimane invariato
         const products = [
             { name: "T-Shirt Classica", price: 29.99 },
             { name: "Jeans Slim Fit", price: 59.99 },
             { name: "Felpa con Cappuccio", price: 49.99 }
         ];
 
-        // Funzione per visualizzare i prodotti
         function displayProducts() {
             const productList = document.getElementById('product-list');
             products.forEach(product => {
@@ -99,12 +103,14 @@
             });
         }
 
-        // Funzione per aggiungere al carrello (da implementare)
         function addToCart(productName) {
             alert(`Prodotto aggiunto al carrello: ${productName}`);
-            // Qui potresti implementare la logica del carrello
         }
 
+        window.onload = displayProducts;
+    </script>
+</body>
+</html>
         // Carica i prodotti quando la pagina è pronta
         window.onload = displayProducts;
     </script>
